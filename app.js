@@ -425,7 +425,7 @@
     if (!guestReady) return null;
     if (guest && guestAdmin) {
       return el("span", { class: "cabinet-sub" },
-        "Брони: ты вошёл как " + guest.name + " и можешь снимать любые. ",
+        "Брони: ты в аккаунте " + guest.name + " и можешь снимать любые. ",
         el("button", { type: "button", class: "cabinet-link", onclick: guestLogout }, "Выйти из аккаунта"));
     }
     if (guest) {

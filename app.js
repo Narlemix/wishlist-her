@@ -274,7 +274,7 @@
         render();
         showToast("Токен больше не действует. Войди заново", 0, { label: "Войти", fn: openLogin });
       } else if (r.status === 403 || r.status === 404) {
-        showToast("У токена нет права записи в " + CONFIG.owner + "/" + CONFIG.repo + ". Нужен классический токен с правом public_repo и приглашение в соавторы", 0, retry);
+        showToast("У токена нет права записи. Нужен доступ Contents: Read and write к репозиторию " + CONFIG.repo, 0, retry);
       } else {
         showToast("Не получилось сохранить, ошибка GitHub " + r.status, 0, retry);
       }
